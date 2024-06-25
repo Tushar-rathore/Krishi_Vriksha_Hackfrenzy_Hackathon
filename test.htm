@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Data Display</title>
+    
+</head>
+<body>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#dataDisplay {
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #0bff8d; 
+        background-color: #ffffff; 
+        font-size: 16px; 
+        text-align: left; 
+}
+
+  </style>
+    <h1>Current Daily Price of Various Commodities</h1>
+    <button id="fetchData">Fetch Data</button>
+    <div id="dataDisplay"></div>
+
+    <script>
+        document.getElementById("fetchData").addEventListener("click", function() {
+          // Define the API endpoint URL
+          const url = 'https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070';
+      
+          // Define the API key and format
+          const api_key = '579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b';
+          const format = 'json';
+      
+          // Create the headers for the request
+          const headers = new Headers({
+            'accept': 'application/xml', // Change to 'application/xml'
+          });
+      
+          // Define the parameters for the request
+          const params = new URLSearchParams({
+            'api-key': api_key,
+            'format': format,
+          });
+      
+          // Make the GET request to the API
+          fetch(`${url}?${params}`, { method: 'GET', headers: headers })
+            .then(response => {
+              if (response.status === 200) {
+                return response.text();
+              } else {
+                throw new Error('Error: ' + response.status); // Corrected error message syntax
+              }
+            })
+            .then(data => {
+              // Display the data
+              document.getElementById("dataDisplay").textContent = data;
+              document.getElementById("dataDisplay").style.display = "block";
+            })
+            .catch(error => {
+              console.error(error);
+            });
+        });
+      </script>
+      
+
+</body>
+</html>

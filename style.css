@@ -1,0 +1,743 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Oswald:wght@300;400&family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+}
+body  section{
+    overflow: hidden;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Oswald' !important;
+}
+p{
+    font-family: 'Poppins' !important;
+}
+button{
+        font-family: 'Poppins', sans-serif !important;
+}
+html{
+    font-size: 16px ;
+}
+h1{
+    font-size: 2rem;
+}
+.goog-te-gadget {
+    font-family: arial;
+    font-size: 11px;
+    color: #666;
+    white-space: nowrap;
+    height: 35px;
+    overflow: hidden;
+}
+.goog-te-gadget .goog-te-combo {
+    padding: 5px;
+    border-radius: 5px;
+}
+header{
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(50px);
+    position: fixed;
+    top:0;
+    width: 100vw;
+    box-sizing: border-box;
+    min-height: 10vh;
+}
+.tear-effect{
+    z-index: 100;
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    bottom: 0;
+}
+.headerlogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LoginBtns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+ button{
+    padding: 10px 30px;
+    background-color: #2d0a06;
+    color: white;
+    font-size: 1rem;
+}
+.selectLamguage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heroSection{
+    height: 130vh;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.heroSection{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-image: url("/images/krishi\ vriksha\ hero\ image\ 1.jpg");
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.HeroCTA{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 25%;
+    transform: scale(1.1);
+    z-index: 50;
+}
+.HeroCTA h1{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+.farmerBullock{
+    height: 100px;
+    width: 250px;
+    background-image: url("./images/BULLOCK.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 82.5%;
+    animation: ghodagaadi 20s linear infinite;
+}
+@keyframes ghodagaadi{
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: -20%;
+    }
+}
+.OurServices{
+    padding: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+    .title{
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        border-bottom: 5px solid #d26823 ;
+    }
+}
+.services .serviceOpt{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.serviceOpt h2{
+    padding-bottom: 15px;
+}
+.serviceOpt img{
+    height: 250px;
+    margin: 20px;
+    transition: 200ms linear;
+}
+.serviceOpt img:hover{
+    transform: rotate(45deg);
+}
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    gap: 100px;
+}
+.left-polygon,.right-polygon{
+    position: absolute;
+}
+.left-polygon{
+    left: 0;
+    top: 15%;
+}
+.right-polygon{
+    right: 0;
+    top: 15%;
+}
+.About{
+    min-height: 500px;
+    width: 100vw;
+    border-top: 7px solid #d26823;
+    border-bottom: 7px solid #d26823;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.About .imageSection{
+    height: 100%;
+}
+.About .imageSection img{
+    height: 450px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.About .ContentSection{
+    width: 500px;
+    position: absolute;
+    right: 15%;
+}
+.About .ContentSection button{
+    background: #d26823;
+}
+.About .ContentSection h1{
+    margin-bottom: 20px;
+}
+li{
+    list-style: none;
+}
+.ContentSection ul li{
+    margin: 10px 0;
+}
+.ContentSection ul li::before{
+    content: " 55";
+    color: rgba(0,0,0,0);
+    height: 30px;width: 30px;
+    margin-right: 10px;
+    background: url("./images/leaf.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.design1{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.marketPrice{
+    min-height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+    position: relative;
+    padding: 2rem;
+}
+#low-and-high-commodity {
+    width: 30%;
+}
+.todaysData{
+    width: 360px;
+}
+.todaysData .container {
+    min-height: 350px;
+    min-width: 350px;
+    width: max-content;
+    border: 5px solid #6BA53E;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 20px;
+}
+.commodityPrice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: black;
+    background-color: #6ba53e7a;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 330px;
+}
+.commodityPrice .item{
+    font-weight: 900;
+}
+.commodityPrice .city{
+    font-size: .8rem;
+}
+.commodityPrice .city::before{
+    content: "-.";
+    color: rgba(0,0,0,0);
+    height: 10px;width: 10px;
+    margin-right: 5px;
+    background-image: url("./images/location-pin.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.max,.min,.avg{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.max{
+    color: rgb(14, 117, 14);
+}
+.min{
+    color: rgb(207, 49, 49);
+}
+.maxPrice,.minPrice,.avgPrice{
+    font-size: .7rem;
+}
+.LiveData{
+    max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.contactus{
+    display: flex;
+    min-height: 400px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 50px;
+}
+.contactus .imageSect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.formSect form{
+    display: flex;
+    flex-direction: column;
+    background-color: #6c4949;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+}
+.formSect form input,.formSect form textarea{
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+
+
+
+/* footer css */
+
+.footer-distributed{
+    background: #2d0a06;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+  }
+  
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  /* Footer left */
+  
+  .footer-distributed .footer-left{
+    width: 40%;
+  }
+  
+  /* The company logo */
+  
+  .footer-distributed h3{
+    color:  #66ff00;
+    font: normal 36px 'Open Sans', cursive;
+    margin: 0;
+  }
+  
+  .footer-distributed h3 span{
+    color:  #66ff00;
+  }
+  
+  /* Footer links */
+  
+  .footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+  
+  .footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    font-weight:400;
+    text-decoration: none;
+    color:  inherit;
+  }
+  
+  .footer-distributed .footer-company-name{
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    
+  }
+  
+  /* Footer Center */
+  
+  .footer-distributed .footer-center{
+    width: 35%;
+  }
+  
+  .footer-distributed .footer-center i{
+    background-color:  #000000;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+  
+  .footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+  }
+  
+  .footer-distributed .footer-center p{
+    display: inline-block;
+    color: #ffffff;
+    font-weight:400;
+    vertical-align: middle;
+    margin:0;
+  }
+  
+  .footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+  }
+  
+  .footer-distributed .footer-center p a{
+    color:  rgb(255, 255, 255);
+    text-decoration: none;;
+  }
+  
+  .footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+  }
+  
+  /* Footer Right */
+  
+  .footer-distributed .footer-right{
+    width: 20%;
+  }
+  
+  .footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  .footer-distributed .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .footer-distributed .footer-icons{
+    margin-top: 25px;
+  }
+  
+  .footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #000000;
+    border-radius: 2px;
+  
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+  
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+  
+  /* If you don't want the footer to be responsive, remove these media queries */
+  
+  @media (max-width: 880px) {
+  
+    .footer-distributed{
+      font: bold 14px sans-serif;
+    }
+  
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+  
+    .footer-distributed .footer-center i{
+      margin-left: 0;
+    }
+
+  
+  } 
+   p.ending-quote {
+    text-align: center;
+    color: white;margin-top: 12px;
+}
+
+.SelectState{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+#HighPrice {
+    color: red;
+    font-weight: bold;
+
+}
+.educationalVideo{
+    min-height: 100vh;
+    background: #f2f2f2;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .title{
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        border-bottom: 5px solid #d26823 ;
+    }
+}
+
+.videoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .video{
+        height: 200px;
+        width: 300px;
+        aspect-ratio: 16/9;
+        background: #000;
+    }
+
+}
+
+.section-cell {
+    padding: 200px;
+}
+
+.options {
+    /* margin: 0 auto; */
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+.option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    border: 2px solid black;
+    width: 290px;
+    border-radius: 8px;
+    padding: 7px;
+    margin: 10px auto;
+
+
+}
+
+.option:hover {
+    scale: 0.98;
+}
+
+.skiptranslate iframe{
+    visibility: hidden !important;
+}
+
+
+
+
+
+/* tab phone responsiveness */
+
+@media (max-width: 769px) {
+
+    .heroSection{
+        height: 100vh;
+    }
+    .tear-effect{
+        min-width: 700px;
+    }
+    .services{
+        gap: 20px;
+    }
+
+    .About{
+        height: 85vh;
+        justify-content: center;
+        align-items: flex-start;
+
+        .design1{
+            height: 100px;
+        }
+        .ContentSection{
+            transform: translateY(70px);
+            right: unset;
+        }
+    }
+    .About .imageSection img{
+        height: 300px;
+    }
+
+
+    .contactus{
+        flex-direction: column;
+    }
+    .left-polygon{
+        left: 0;
+        top: 50%;
+    }
+    .right-polygon{
+        right: 0;
+        top: 40%;
+    }
+    .marketPrice{
+        flex-direction: column;
+        
+    }
+    .LiveData{
+        padding: 30px;
+    }
+    #low-and-high-commodity{
+        width: unset;
+        margin-top: 80px;
+    }
+    .todaysData{
+        width: unset;
+    }
+    .SelectState{
+        right: unset;
+    }
+    #stateSelect{
+        padding: 0 10px;
+    }
+    .commodityPrice{
+        min-width: 410px;
+    }
+  }
+
+
+  /* mobile responsive */
+
+  @media (max-width: 500px){
+    .LoginBtns{
+        display: none;
+    }
+    .headerlogo img{
+        width: 120px;
+        height: 40px;
+    }
+    html{
+        font-size: .8rem;
+    }
+    h1{
+        font-size: 2.5em !important;
+    }
+
+    .commodityPrice{
+        flex-direction: column;
+        min-width: max-content;
+        align-items: flex-start;
+    }
+    .todaysData .container{
+        min-width: 230px;
+    }
+    .LiveData{
+        width: 100vw;
+        flex-wrap: wrap;
+    }
+    .About{
+        min-height: 85vh;
+        height: 800px;
+    }
+    .About .ContentSection{
+        width: unset;
+        left: 15%;
+        right: 15%;
+    }
+    .OurServices{
+        padding-top: 2rem;
+    }
+    .SelectState{
+        top: 30px;
+    }
+    .formSect form{
+        width: 300px;
+        margin-top: 10px;
+    }
+    .imageSect img{
+        height: 250px;
+        width: 300px;
+    }
+  }

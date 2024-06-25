@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishi Vriksha</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="shortcut icon" href="./images/krishi vriksha logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <a href="/index.html">
+        <div class="headerlogo">
+            <img src="./images/logo.png" alt="" height="60px">
+        </div>
+        </a>
+        <div class="selectLamguage">
+            <div id="google_translate_element"></div>
+        </div>
+        <div class="LoginBtns">
+            <a href="/buy.html"><button>BUY</button></a>
+            <img src="./images/profile icon.png" alt="" height="40">
+        </div>
+    </header>
+    <section class="heroSection">
+        <div class="HeroCTA">
+            <h1>Rooted in Agriculture, <br>
+                Growing with Innovation
+            </h1>
+            <a href="#market">
+            <button>EXPLORE THE MARKETPLACE</button></a>
+        </div>
+    <img src="./images/tear effect.png" alt="" class="tear-effect">
+        </div>
+    </section>
+
+    <section class="OurServices">
+        <img src="./images/left polygon.png" alt="" class="left-polygon" height="150px">
+        <img src="./images/right polygon.png" alt="" class="right-polygon" height="150px">
+        <div class="title">
+            <h1>Our Services</h1>
+        </div>
+        <div class="services">
+
+            <a href="/buy.html">
+            <div class="serviceOpt buySection">
+                <img src="./images/buy iconl.png" alt="">
+                <h2>BUY COMMODITIES</h2>
+                <p>Krishi Vriksha offers a seamless and practical platform for your purchasing needs, whether you're a consumer shopping for fresh food or a corporation in need of large agricultural products.</p>
+            </div>
+            </a>
+
+            <a href="#market">
+            <div class="serviceOpt buySection">
+                <img src="./images/marketplace icon.png" alt="">
+                <h2>KNOW THE MARKET INFORMATION</h2>
+                <p>Real-time crop price updates empower farmers for informed decisions, ensuring fair profits and market trend awareness.</p>
+            </div>
+            </a>
+
+            <a href="/sell.html">
+            <div class="serviceOpt buySection">
+                <img src="./images/sell icon.png" alt="">
+                <h2>SELL YOUR COMMODITIES</h2>
+                <p>Farmers and agricultural company owners have the opportunity to showcase their products to a big and engaged audience thanks to Krishi Vriksha.</p>
+            </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="marketPrice" id="market">
+             <!-- ** -->
+            <div class="SelectState">
+             <label for="stateSelect">Select a State:</label>
+             <select id="stateSelect" onchange="selectState()">
+                 <!-- Options will be added dynamically using JavaScript -->
+             </select>
+            </div>
+             <!-- ** -->
+        <div id="low-and-high-commodity">
+            <div class="todaysData">
+                <h2 align="center">Live Market Price (Rupees per Quintel)</h2>
+                <br>
+                <div class="container">
+                    <div id="highest">
+                        <!-- <div class="highest">
+                        <p>Today's Highest Commodity</p>
+                        <div class="commodityPrice">
+                            <div class="ItemCity">
+                                <div class="item">Cauliflower</div>
+                                <div class="city">Bhilai</div>
+                            </div>
+                            <div class="price">
+                                <div class="max">
+                                    <p class="maxPrice">MAX PRICE</p>
+                                    <p>200 INR</p>
+                                </div>
+                                <div class="min">
+                                    <p class="maxPrice">MIN PRICE</p>
+                                    <p>185 INR</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    </div>
+                    <div id="lowest">
+                        <!-- <div class="highest">
+                        <p>Today's Highest Commodity</p>
+                        <div class="commodityPrice">
+                            <div class="ItemCity">
+                                <div class="item">Cauliflower</div>
+                                <div class="city">Bhilai</div>
+                            </div>
+                            <div class="price">
+                                <div class="max">
+                                    <p class="maxPrice">MAX PRICE</p>
+                                    <p>200 INR</p>
+                                </div>
+                                <div class="min">
+                                    <p class="maxPrice">MIN PRICE</p>
+                                    <p>185 INR</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    </div>
+                    <!-- <br>
+                    <p>Today's Highest Commodity</p>
+                    <div class="commodityPrice">
+                        <div class="ItemCity">
+                            <div class="item">Cauliflower</div>
+                            <div class="city">Bhilai</div>
+                        </div>
+                        <div class="price">
+                            <div class="max">
+                                <p class="maxPrice">MAX PRICE</p>
+                                <p>200 INR</p>
+                            </div>
+                            <div class="min">
+                                <p class="maxPrice">MIN PRICE</p>
+                                <p>185 INR</p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="LiveData" id="LiveData">
+            <!-- <div class="commodityPrice">
+                <div class="ItemCity">
+                    <div class="item">Cauliflower</div>
+                    <div class="city">Bhilai</div>
+                </div>
+                <div class="price">
+                    <div class="max">
+                        <p class="maxPrice">MAX PRICE</p>
+                        <p>200 INR</p>
+                    </div>
+                    <div class="min">
+                        <p class="maxPrice">MIN PRICE</p>
+                        <p>185 INR</p>
+                    </div>
+                </div>
+            </div> -->
+
+
+        </div>
+    </section>
+
+    <section class="About">
+        <img src="./images/Vector 2.png" alt="" class="design1">
+        <div class="imageSection">
+            <img src="./images/Group 3.png" alt="">
+        </div>
+        <div class="ContentSection">
+            <h1>About Us</h1>
+            <p>At Krishi Vriksha, we believe that every farmer deserves the power to make informed decisions about their crops and their future. Our platform is a transformative force in agriculture, bridging the gap between farmers and the information they need to thrive.</p>
+            <ul>
+                <li>User friendly</li>
+                <li>Education and Information for farmer</li>
+                <li>Connection system</li>
+                <li>Live Marketplace</li>
+            </ul>
+            <a href="/education.html">
+            <button>SEE EDUCATIONAL RESOURCES</button></a>
+        </div>
+    </section>
+
+    <section class="contactus">
+        <div class="imageSect">
+            <img src="./images/contact us.png" alt="" height="350">
+        </div>
+        <div class="formSect">
+            <h2>Contact Us</h2>
+            <form action="">
+                <input type="text" name="" id="" placeholder="Enter Name"><br>
+                <input type="email" name="" id="" placeholder="Enter Email"><br>
+                <textarea name="" id="" cols="20" rows="7" placeholder="Message"></textarea>
+                <br>
+                <button type="submit">SEND</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer-distributed">
+    
+        <div class="footer-left">
+  
+          <h3>Krishi<span>Vriksha</span> </h3>
+  
+          <p class="footer-links">
+                        
+            <a href="#">About Us</a>
+          
+            <a href="#">Market Information</a>
+          
+            <a href="#">Our Services</a>
+            
+            <a href="#">Contact Us</a>
+          </p>
+  
+        
+        </div>
+  
+        <div class="footer-center">
+  
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p>Bhilai, Chattisgarh</p>
+          </div>
+  
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>1234567890</p>
+          </div>
+  
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">support@krishivriksha.com</a></p>
+          </div>
+  
+        </div>
+  
+        <div class="footer-right">
+  
+          <p class="footer-company-about">
+            <span>About Krishi Vriksha</span>
+           Bringing a small platform to bring a Bigger Change 
+          </p>
+  
+          <div class="footer-icons">
+  
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands  fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands  fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+  
+          </div>
+  
+        </div>
+        <strong><p class="ending-quote">Krishi Vriksha Created By Team Sangwari</p></strong>
+      </footer>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+
+
+        
+// API CAll
+$(document).ready(function () {
+    var selectStateVal = 'Bihar';
+    changeData(selectStateVal);
+    $("#HighPrice").hide();
+});
+const indianStates = [
+
+    'Bihar',
+    'Gujarat',
+    'Kerala',
+    'Maharashtra',
+    'Meghalaya',
+    'Nagaland',
+    'Punjab',
+    'Rajasthan',
+    'Telangana',
+    'Tripura',
+    'Uttar Pradesh',
+    'Uttrakhand',
+
+];
+
+// Get the select element
+const selectElement = document.getElementById("stateSelect");
+
+// Create and append option elements for each state
+indianStates.forEach(state => {
+    const option = document.createElement("option");
+    option.text = state;
+    option.value = state; // You can set a value for each option if needed
+    selectElement.appendChild(option);
+});
+
+let selectState = () => {
+    // $("#stateSelect").val();
+    selectStateVal = $("#stateSelect").val();
+    console.log(selectStateVal);
+
+    changeData(selectStateVal);
+}
+
+
+
+
+
+
+function changeData(selectStateVal) {
+
+
+
+
+    // ************api request 
+    let apiKey = '579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b';
+    let format = 'json'
+    let state = selectStateVal;
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', `https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=${apiKey}&format=${format}&filters%5Bstate%5D=${state}`, true);
+
+    xhr.onload = function () {
+        if (this.status === 200) {
+            let json = JSON.parse(this.responseText);
+            allrecords = json.records;
+            console.log(json);
+            let newsHtml = '';
+            allrecords.forEach(record => {
+                let data = `
+                <div class="commodityPrice">
+                    <div class="ItemCity">
+                        <div class="item">${record.commodity}</div>
+                        <div class="city">${record.state} (${record.market})</div>
+                    </div>
+                    <div class="price">
+                        <div class="max">
+                            <p class="maxPrice">MAX PRICE</p>
+                            <p>${record.max_price} INR</p>
+                        </div>
+                        <div class="min">
+                            <p class="maxPrice">MIN PRICE</p>
+                            <p>${record.min_price} INR</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+                newsHtml += data;
+
+                // Check if the current record has max_price >= 1000 and set the "HighPrice" element's display accordingly
+                if (record.max_price >= record.modal_price) {
+                    $("#HighPrice").text(record.commodity + " Prices Are too High").show();
+                } else {
+                    $("#HighPrice").hide();
+                   
+                }
+            });
+
+            const newsAccordion = document.getElementById("LiveData");
+
+
+            newsAccordion.innerHTML = newsHtml;
+
+
+
+            // // min and max price show 
+
+            // Find the record with the highest price
+            let highestPriceRecord = null;
+            let highestPrice = Number.NEGATIVE_INFINITY;
+
+            allrecords.forEach(record => {
+                if (record.max_price > highestPrice) {
+                    highestPrice = record.max_price;
+                    highestPriceRecord = record;
+                }
+            });
+
+            // Create HTML for the highest price commodity
+            if (highestPriceRecord) {
+                let highestPriceHtml = `
+        <div class="highest">
+        <p id="HighPrice">> ${highestPriceRecord.commodity} Price is Too High </p><br>
+            <p>Today's Highest Commodity</p>
+            <div class="commodityPrice">
+                <div class="ItemCity">
+                    <div class="item">${highestPriceRecord.commodity}</div>
+                    <div class="city">${highestPriceRecord.state} (${highestPriceRecord.market})</div>
+                </div>
+                <div class="price">
+                    <div class="max">
+                        <p class="maxPrice">MAX PRICE</p>
+                        <p>${highestPriceRecord.max_price} INR</p>
+                    </div>
+                    <div class="avg">
+                        <p class="avgPrice">AVG PRICE</p>
+                        <p>${highestPriceRecord.modal_price} INR</p>
+                    </div>
+                    <div class="min">
+                        <p class="maxPrice">MIN PRICE</p>
+                        <p>${highestPriceRecord.min_price} INR</p>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+    `;
+                // Insert the generated HTML into the <div id="highest"> element
+                const highestElement = document.getElementById("highest");
+                console.log(highestElement);
+                highestElement.innerHTML = highestPriceHtml;
+            }
+
+
+            // lowest price 
+            // Find the record with the lowest price
+            let lowestPriceRecord = null;
+            let lowestPrice = Number.POSITIVE_INFINITY;
+
+            allrecords.forEach(record => {
+                if (record.min_price < lowestPrice) {
+                    lowestPrice = record.min_price;
+                    lowestPriceRecord = record;
+                }
+            });
+
+            // Create HTML for the lowest price commodity
+            if (lowestPriceRecord) {
+                let lowestPriceHtml = `
+                <div class="lowest">
+                    <p>Today's Lowest Commodity</p>
+                    <div class="commodityPrice">
+                        <div class="ItemCity">
+                            <div class="item">${lowestPriceRecord.commodity}</div>
+                            <div class="city">${lowestPriceRecord.state} (${lowestPriceRecord.market})</div>
+                        </div>
+                        <div class="price">
+                            <div class="max">
+                                <p class="maxPrice">MAX PRICE</p>
+                                <p>${lowestPriceRecord.max_price} INR</p>
+                            </div>
+                            <div class="avg">
+                               <p class="avgPrice">AVG PRICE</p>
+                               <p>${lowestPriceRecord.modal_price} INR</p>
+                            </div>
+                            <div class="min">
+                                <p class="maxPrice">MIN PRICE</p>
+                                <p>${lowestPriceRecord.min_price} INR</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+                // Insert the generated HTML into the <div id="lowest"> element
+                const lowestElement = document.getElementById("lowest");
+                lowestElement.innerHTML = lowestPriceHtml;
+            }
+            // Now you can work with the JSON data...
+        }
+    };
+
+    xhr.send();
+}
+        
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="/script.js"></script>
+</body>
+</html>
